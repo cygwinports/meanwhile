@@ -1,0 +1,111 @@
+meanwhile
+------------------------------------------
+The Meanwhile library provides the basic Lotus Sametime session 
+functionality along with the core services; Presence Awareness, Instant 
+Messaging, Multi-user Conferencing, Preferences Storage, Identity 
+Resolution, and File Transfer.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  glib2-2.12.11-1
+
+Build requirements:
+(besides corresponding -devel packages)
+  cygwin-1.5.24-2
+  autoconf2.5-2.61-1
+  automake1.9-1.9.6-2
+  binutils-20060817-1
+  cygport-0.2.11-1
+  doxygen-1.5.1-1
+  gawk-3.1.5-4
+  gcc-core-3.4.4-3
+  libtool1.5-1.5.23a-2
+  make-3.81-1
+  pkg-config-0.21-1
+  sed-4.1.5-2
+
+Canonical website:
+  http://meanwhile.sourceforge.net/
+
+Canonical download:
+  http://downloads.sourceforge.net/meanwhile/
+
+-------------------------------------------
+
+Build instructions:
+  unpack meanwhile-1.0.2-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./meanwhile-1.0.2-X.cygport all
+
+This will create:
+  /usr/src/meanwhile-1.0.2-X-src.tar.bz2
+  /usr/src/meanwhile-1.0.2-X.tar.bz2
+  /usr/src/libmeanwhile1-1.0.2-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/include/meanwhile/mw_channel.h
+  /usr/include/meanwhile/mw_cipher.h
+  /usr/include/meanwhile/mw_common.h
+  /usr/include/meanwhile/mw_error.h
+  /usr/include/meanwhile/mw_message.h
+  /usr/include/meanwhile/mw_service.h
+  /usr/include/meanwhile/mw_session.h
+  /usr/include/meanwhile/mw_srvc_aware.h
+  /usr/include/meanwhile/mw_srvc_conf.h
+  /usr/include/meanwhile/mw_srvc_dir.h
+  /usr/include/meanwhile/mw_srvc_ft.h
+  /usr/include/meanwhile/mw_srvc_im.h
+  /usr/include/meanwhile/mw_srvc_place.h
+  /usr/include/meanwhile/mw_srvc_resolve.h
+  /usr/include/meanwhile/mw_srvc_store.h
+  /usr/include/meanwhile/mw_st_list.h
+  /usr/lib/libmeanwhile.a
+  /usr/lib/libmeanwhile.dll.a
+  /usr/lib/libmeanwhile.la
+  /usr/lib/pkgconfig/meanwhile.pc
+  /usr/share/doc/Cygwin/meanwhile-1.0.2.README
+  /usr/share/doc/meanwhile-1.0.2/AUTHORS
+  /usr/share/doc/meanwhile-1.0.2/COPYING
+  /usr/share/doc/meanwhile-1.0.2/ChangeLog
+  /usr/share/doc/meanwhile-1.0.2/INSTALL
+  /usr/share/doc/meanwhile-1.0.2/LICENSE
+  /usr/share/doc/meanwhile-1.0.2/README
+  /usr/share/doc/meanwhile-1.0.2/TODO
+  /usr/share/doc/meanwhile-1.0.2/html/doxygen.css
+  /usr/share/doc/meanwhile-1.0.2/html/doxygen.png
+  /usr/share/doc/meanwhile-1.0.2/html/index.html
+  /usr/share/doc/meanwhile-1.0.2/html/tab_b.gif
+  /usr/share/doc/meanwhile-1.0.2/html/tab_l.gif
+  /usr/share/doc/meanwhile-1.0.2/html/tab_r.gif
+  /usr/share/doc/meanwhile-1.0.2/html/tabs.css
+  /usr/share/doc/meanwhile-1.0.2/latex/FreeSans.ttf
+  /usr/share/doc/meanwhile-1.0.2/latex/Makefile
+  /usr/share/doc/meanwhile-1.0.2/latex/doxygen.sty
+  /usr/share/doc/meanwhile-1.0.2/latex/refman.tex
+  /usr/share/doc/meanwhile-1.0.2/samples/README
+  /usr/share/doc/meanwhile-1.0.2/samples/build
+  /usr/share/doc/meanwhile-1.0.2/samples/logging_proxy.c
+  /usr/share/doc/meanwhile-1.0.2/samples/login_server.c
+  /usr/share/doc/meanwhile-1.0.2/samples/nocipher_proxy.c
+  /usr/share/doc/meanwhile-1.0.2/samples/redirect_server.c
+  /usr/share/doc/meanwhile-1.0.2/samples/sendmessage.c
+  /usr/share/doc/meanwhile-1.0.2/samples/socket.c
+
+(libmeanwhile1)
+  /usr/bin/cygmeanwhile-1.dll
+
+------------------
+
+Port Notes:
+
+----- version 1.0.2-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
