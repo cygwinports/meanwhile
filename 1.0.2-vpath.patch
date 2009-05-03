@@ -1,0 +1,11 @@
+--- origsrc/meanwhile-1.0.2/doc/Doxyfile.in	2004-10-18 23:48:53.000000000 -0500
++++ src/meanwhile-1.0.2/doc/Doxyfile.in	2009-05-03 14:08:27.671887100 -0500
+@@ -400,7 +400,7 @@ WARN_LOGFILE           = 
+ # directories like "/usr/src/myproject". Separate the files or directories 
+ # with spaces.
+ 
+-INPUT                  = ../src
++INPUT                  = @top_srcdir@/src
+ 
+ # If the value of the INPUT tag contains directories, you can use the
+ # FILE_PATTERNS tag to specify one or more wildcard pattern (like

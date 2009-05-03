@@ -1,0 +1,19 @@
+DESCRIPTION="Lotus SameTime protocol library"
+HOMEPAGE="http://meanwhile.sourceforge.net/"
+SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+PATCH_URI="1.0.2-as-needed.patch
+           1.0.2-vpath.patch"
+
+PKG_NAMES="${PN} lib${PN}1 lib${PN}-devel"
+libmeanwhile1_CONTENTS="usr/bin/cygmeanwhile-1.dll"
+libmeanwhile_devel_CONTENTS="--exclude=latex usr/include/ usr/lib/ usr/share/doc/"
+PKG_IGNORE="usr/share/doc/meanwhile/latex/"
+
+DISTCLEANFILES="meanwhile.pc meanwhile.spec samples/build"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	mv ${D}/usr/share/doc/${PN}-doc-${PV} ${D}/usr/share/doc/${PN}
+}

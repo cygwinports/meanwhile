@@ -1,0 +1,11 @@
+--- origsrc/meanwhile-1.0.2/samples/build.in	2005-12-29 19:55:34.000000000 -0600
++++ src/meanwhile-1.0.2/samples/build.in	2007-05-14 00:28:06.000000000 -0500
+@@ -29,7 +29,7 @@
+ 
+     CFLAGS=`$PKG_CONFIG --libs --cflags glib-2.0 meanwhile`
+ 
+-    "$CC" $CFLAGS -o "$SAMPLE" "$SOURCE"
++    "$CC" -o "$SAMPLE" "$SOURCE" $CFLAGS
+     return $?
+ }
+ 

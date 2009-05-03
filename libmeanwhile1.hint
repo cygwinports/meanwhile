@@ -1,6 +1,7 @@
 category: Net
-requires: cygwin glib2-devel libmeanwhile1
-sdesc: "Lotus SameTime protocol library (development)"
+requires: cygwin libgcc1 libglib2.0_0
+external-source: meanwhile
+sdesc: "Lotus SameTime protocol library (runtime)"
 ldesc: "The Meanwhile library provides the basic Lotus Sametime session
 functionality along with the core services; Presence Awareness, Instant
 Messaging, Multi-user Conferencing, Preferences Storage, Identity
