@@ -1,5 +1,5 @@
 category: Net
-requires: cygwin libmeanwhile1 libglib2.0-devel
+requires: libmeanwhile1 libglib2.0-devel
 external-source: meanwhile
 sdesc: "Lotus SameTime protocol library (development)"
 ldesc: "The Meanwhile library provides the basic Lotus Sametime session
