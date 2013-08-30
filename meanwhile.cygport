@@ -1,0 +1,37 @@
+NAME="meanwhile"
+VERSION=1.0.2
+RELEASE=11
+CATEGORY="Libs"
+SUMMARY="Lotus SameTime protocol library"
+DESCRIPTION="The Meanwhile library provides the basic Lotus Sametime session
+functionality along with the core services; Presence Awareness, Instant
+Messaging, Multi-user Conferencing, Preferences Storage, Identity Resolution,
+and File Transfer."
+SUMMARY="Lotus SameTime protocol library"
+HOMEPAGE="http://meanwhile.sourceforge.net/"
+SRC_URI="mirror://sourceforge/meanwhile/meanwhile-${VERSION}.tar.gz"
+
+PATCH_URI="
+	mirror://portage/net-libs/meanwhile/files/meanwhile-1.0.2-glib2.31.patch
+	mirror://portage/net-libs/meanwhile/files/meanwhile-1.0.2-presence.patch
+	1.0.2-as-needed.patch
+	1.0.2-vpath.patch
+"
+
+PKG_NAMES="libmeanwhile1 libmeanwhile-devel libmeanwhile-doc"
+libmeanwhile1_CONTENTS="usr/bin/cygmeanwhile-1.dll usr/share/doc/${NAME}/[ACLNRT]*"
+libmeanwhile_devel_CONTENTS="--exclude=latex usr/include/ usr/lib/"
+libmeanwhile_doc_CATEGORY="Doc"
+libmeanwhile_doc_CONTENTS="usr/share/doc/${NAME}/html/ usr/share/doc/${NAME}/samples/"
+PKG_IGNORE="usr/share/doc/meanwhile/latex/"
+
+DISTCLEANFILES="meanwhile.pc meanwhile.spec samples/build"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	mv ${D}/usr/share/doc/meanwhile-doc-${VERSION} ${D}/usr/share/doc/${NAME}
+}
+
+KEEP_LA_FILES="none"
